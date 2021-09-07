@@ -1,0 +1,36 @@
+{
+  planetas: allPlanets {
+    planeta: planets {
+      nombre: name
+      diameter
+      gravity
+    }
+  }
+  allVehicles {
+    vehicles {
+      name
+      model
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+{
+  planetas: allPlanets (last: 10) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      node {
+        name
+        diameter
+      }
+    }
+    }
+  }
+  
